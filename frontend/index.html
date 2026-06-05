@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vehicle Rental System</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f2f6ff;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #1f4b99, #3a7bd5);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* INPUTS */
+input {
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTON */
+button {
+    padding: 10px 15px;
+    border: none;
+    background: #1f4b99;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #163a73;
+}
+
+/* VEHICLE CARD */
+.vehicle {
+    display: flex;
+    align-items: center;
+    background: #eaf1ff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+/* IMAGE */
+.vehicle img {
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🚗 Vehicle Rental Management System</h1>
+</header>
+
+<div class="container">
+
+<!-- ADD VEHICLE -->
+<div class="card">
+<h2>➕ Add Vehicle</h2>
+
+<input id="v_name" placeholder="Vehicle Name">
+<input id="v_type" placeholder="Type">
+<input id="v_rent" placeholder="Rent">
+
+<br>
+<button onclick="addVehicle()">Add Vehicle</button>
+</div>
+
+<!-- ADD CUSTOMER -->
+<div class="card">
+<h2>👤 Add Customer</h2>
+
+<input id="c_name" placeholder="Name">
+<input id="c_phone" placeholder="Phone">
+<input id="c_email" placeholder="Email">
+
+<br>
+<button onclick="addCustomer()">Add Customer</button>
+</div>
+
+<!-- RENT -->
+<div class="card">
+<h2>📦 Rent Vehicle</h2>
+
+<input id="r_customer" placeholder="Customer ID">
+<input id="r_vehicle" placeholder="Vehicle ID">
+
+<br>
+<button onclick="rentVehicle()">Rent</button>
+</div>
+
+<!-- VEHICLES -->
+<div class="card">
+<h2>🚘 Available Vehicles</h2>
+
+<button onclick="loadVehicles()">Load Vehicles</button>
+
+<div id="vehicleList"></div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
